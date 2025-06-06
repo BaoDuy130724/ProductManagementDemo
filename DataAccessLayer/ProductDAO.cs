@@ -21,18 +21,19 @@ namespace DataAccessLayer
         {
             return listProduct;
         }
-        //public static List<Product> GetProducts()
-        //{
-        //    var listProdcts = new List<Product>();
-        //    try
-        //    {
-        //        using var db = new MyStoreContext();
-        //    } catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"An error occurred: {ex.Message}");
-        //    }
-        //    return listProdcts;
-        //}
+        public static List<Product> GetProducts()
+        {
+            var listProdcts = new List<Product>();
+            try
+            {
+                using var db = new MyStoreContext();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+            return listProdcts;
+        }
         public void SaveProduct(Product p)
         {
             listProduct.Add(p);

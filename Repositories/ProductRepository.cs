@@ -10,24 +10,20 @@ namespace Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly IProductRepository _repository;
-        public ProductRepository(IProductRepository repository)
-        {
-            _repository = repository;
-        }
-        public void DeleteProduct(Product product) => _repository.DeleteProduct(product);
+        
+        public void DeleteProduct(Product product) => ProductDAO.DeleteProduct(product);
 
 
-        public Product GetProductById(int id) => _repository.GetProductById(id);
+        public Product GetProductById(int id) =>    ProductDAO.GetProductById(id);
 
 
-        public List<Product> GetProducts() => _repository.GetProducts();
+        public List<Product> GetProducts() => ProductDAO.GetProducts();
 
 
-        public void SaveProduct(Product product) => _repository.SaveProduct(product);
+        public void SaveProduct(Product product) => ProductDAO.SaveProduct(product);
 
 
-        public void UpdateProduct(Product product) => _repository.UpdateProduct(product);
+        public void UpdateProduct(Product product) => ProductDAO.UpdateProduct(product);
 
     }
 }

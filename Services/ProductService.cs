@@ -12,9 +12,9 @@ namespace Services
     {
         private readonly IProductRepository iProductRepository;
   
-        public ProductService(IProductRepository productRepository)
+        public ProductService()
         {
-            iProductRepository = productRepository;
+            iProductRepository = new ProductRepository();
         }
 
         public void DeleteProduct(Product p)
