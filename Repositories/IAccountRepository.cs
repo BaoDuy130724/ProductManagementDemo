@@ -9,6 +9,6 @@ namespace Repositories
 {
     public interface IAccountRepository
     {
-        AccountMember GetAccountById(int id);   
+        AccountMember GetAccountById(string accountID);   
     }
 }
